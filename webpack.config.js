@@ -14,17 +14,17 @@ module.exports = {
 		// 清除dist文件夹
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
+			favicon:"./src/static/img/favicon.ico",
 			template: path.resolve(__dirname, "src", "index.html")
 		}),
 		new webpack.ProvidePlugin({
-			process: 'process/browser',
+			// process: 'process/browser',
 			Buffer: ['buffer', 'Buffer']
 		})
 	],
 	devServer: {
 		hot: true,
 		port: 8080,
-		https:true,
 		static: {
 			directory: path.join(__dirname, "/src/static")
 		},
@@ -52,12 +52,6 @@ module.exports = {
 		}]
 	},
 	resolve: {
-		fallback: {
-			"stream": require.resolve("stream-browserify"),
-			"crypto": require.resolve("crypto-browserify"),
-			"assert": require.resolve("assert/"),
-			"http": require.resolve("stream-http"),
-			"https": require.resolve("https-browserify")
-		}
+		
 	}
 }
