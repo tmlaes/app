@@ -9,8 +9,11 @@ const prodWebpack = merge(common, {
       new CssMinimizerPlugin({
         parallel: true,
       }),
-    ]
-  },
+    ],
+	splitChunks: {
+	  chunks: 'all'
+	}
+  }
 })
 // 最后通过 module.exports 导出
 module.exports = prodWebpack

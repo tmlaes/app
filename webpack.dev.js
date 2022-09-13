@@ -4,8 +4,9 @@ const commom = require('./webpack.commom.js')
 const devWebpack = merge(commom, {
   mode: "development",
   devServer: {
+	historyApiFallback: true,
     static: {
-    	directory: resolve(__dirname, 'src')
+    	directory: resolve(__dirname, './')
     },
     port: 8080,  // 配置端口
     // open: true, // 配置是否自动打开浏览器
@@ -16,8 +17,8 @@ const devWebpack = merge(commom, {
       "/api": {
         target: "http://localhost:8081",
         changeOrigin: true,
-        ws: true,
-        secure: false,
+        // ws: true,
+        // secure: false,
         pathRewrite: {
           "^/api": "",
         },
@@ -25,6 +26,7 @@ const devWebpack = merge(commom, {
     }
   },
   target: 'web', //热更新
+  devtool: 'inline-source-map',
 })
 // 最后通过 module.exports 导出
 module.exports = devWebpack

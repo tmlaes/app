@@ -1,20 +1,34 @@
-/* template {
-	display: block;
+*{
+	margin: 0;
+	padding: 0;
 }
-.content1{
-	display: flex;
-	justify-content: space-between;
+.ivu-layout{
+    
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+	height: 100vh;
 }
-.form{
-	width: 500px;
-	flex-shrink:0;
-	background-color: #FAFAFA;
+header{
+	width: 100%;
+	height: 3.75rem;
+	text-align: center;
+	font-size: 24px;
+	font-weight:bold;
+	border-bottom: 1px solid #d7dde4;
 }
-.res{
-	flex-shrink:0;
-	background-color: #F6F6F6;
-} */
-span {
-    color: green;
-	white-space: pre-wrap;
+
+.ivu-layout .ivu-layout-sider {
+  display: flex;
+  border-right: 1px solid #d7dde4;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.ivu-layout .ivu-layout-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

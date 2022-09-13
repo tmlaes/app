@@ -6,9 +6,18 @@
 	</head>
 	<body>
 		<div id="app">
-			{{message}}
-		  <span>自定义样式</span>
-		  <lay-button type="normal">百搭按钮</lay-button>	
+			<Layout>
+				<Header>	
+					<my-menu :menuname="menuname" @changemenu="changemenu"></my-menu>
+				</Header>
+				<Layout>
+					<Content>
+						<router-view></router-view>
+					</Content>
+					<!-- <Content><cmp :msg1="menuname"></cmp></Content> -->
+					<Sider>{{menuname}}</Sider>
+				</Layout>
+			</Layout>
 		</div>
 	</body>
 </html>
