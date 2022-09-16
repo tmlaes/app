@@ -45,7 +45,7 @@ module.exports = {
 			},
 			// 资源模块处理图片
 			{
-				test: /.(png|jpe?g|gif)$/i,
+				test: /.(png|jpe?g|gif|ico)$/i,
 				type: "asset",
 				parser: {
 					dataUrlCondition: {
@@ -53,7 +53,7 @@ module.exports = {
 					}
 				},
 				generator: {
-					filename: 'images/[name].[contenthash:5][ext]'
+					filename: 'img/[name]_[contenthash:5].[ext]'
 				}
 			},
 			//      // 打包html中的图片

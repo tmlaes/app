@@ -5,17 +5,22 @@
 		<title></title>
 	</head>
 	<body>
-		<div id="app">
+		<div id="app" class="layout-base">
 			<Layout>
-				<Header>	
-					<my-menu :menuname="menuname" @changemenu="changemenu"></my-menu>
+				<Header class="layout-header">
+					<my-header></my-header>
 				</Header>
 				<Layout>
-					<Content>
-						<router-view></router-view>
+					<Sider class="layout-sider" width=180>
+						<my-menu :menuname="menuname" @changemenu="changemenu"></my-menu>
+					</Sider>
+					<Content class="layout-content">
+						<div class="layout-view">
+							<router-view></router-view>
+						</div>
+						<Footer class="layout-footer"><div>Copyright  © 2022 tmlaes. All Rights Reserved. <Divider type="vertical"></Divider>鄂ICP备 2022015150号<Divider type="vertical"></Divider>微信公众号：tmlaes</div> </Footer>
 					</Content>
-					<!-- <Content><cmp :msg1="menuname"></cmp></Content> -->
-					<Sider>{{menuname}}</Sider>
+					<!-- <Content><cmp :msg1="menuname"></cmp></Content> -->	
 				</Layout>
 			</Layout>
 		</div>

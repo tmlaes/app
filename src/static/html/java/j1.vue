@@ -34,7 +34,16 @@
 		</Paragraph>
 		<Title :level="2">安装</Title>
 		<Paragraph>
-			<pre>$ npm install view-ui-plus --save</pre>
+			<pre>
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+				$ npm install view-ui-plus --save
+			</pre>
 		</Paragraph>
 		<Paragraph>
 			按 <Text keyboard>⌘</Text> + <Text keyboard>K</Text> 键搜索组件...
@@ -43,6 +52,9 @@
 </template>
 <script>
 	export default {
+		setup() {
+			
+		},
 		data() {
 			return {
 

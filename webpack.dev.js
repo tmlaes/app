@@ -9,7 +9,7 @@ const devWebpack = merge(commom, {
     	directory: resolve(__dirname, './')
     },
     port: 8080,  // 配置端口
-    // open: true, // 配置是否自动打开浏览器
+    open: true, // 配置是否自动打开浏览器
     compress: true,
     liveReload: true, //热更新
     //配置代理 解决跨域
